@@ -12,11 +12,11 @@ const openai = new OpenAI({
 });
 
 const HEALTH_CARE_ABI = Healthcare.abi;
-const HEALTH_CARE_ADDRESS = "0x543F2E92eA7DE84e75038e6A3A042c95129d38bb";
+const HEALTH_CARE_ADDRESS = process.env.NEXT_PUBLIC_HEALTH_CARE;
 
 //ADMIN
-const ADMIN_ADDRESS = "0x6631775F2323DaB6DF571c6Aa49b0cC2A41721bc";
-const NETWORK = "open_campus_codex";
+const ADMIN_ADDRESS = process.env.NEXT_PUBLIC_ADMIN_ADDRESS;
+const NETWORK = process.env.NEXT_PUBLIC_NETWORK;
 
 //PINATE API - SECRECT KEYS
 const PINATA_AIP_KEY = process.env.NEXT_PUBLIC_PINATA_AIP_KEY;
@@ -24,7 +24,7 @@ const PINATA_SECRECT_KEY = process.env.NEXT_PUBLIC_PINATA_SECRECT_KEY;
 
 // NETWORK
 const networks = {
-  open_campus_codex: {
+  telos_testnet: {
     chainId: `0x${Number(656476).toString(16)}`,
     chainName: "Open Campus Codex",
     nativeCurrency: {
@@ -43,7 +43,7 @@ const networks = {
       symbol: "EDU",
       decimals: 18,
     },
-    rpcUrls: ["http://127.0.0.1:8545/"],
+    rpcUrls: ["https://rpc.open-campus-codex.gelato.digital"],
     blockExplorerUrls: ["https://opencampus-codex.blockscout.com"],
   },
 };

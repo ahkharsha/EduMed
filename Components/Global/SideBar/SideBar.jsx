@@ -14,7 +14,7 @@ import {
 } from "../../ReactICON/index";
 import Link from "./Link";
 
-const ADMIN_ADDRESS = "0x6631775F2323DaB6DF571c6Aa49b0cC2A41721bc";
+const ADMIN_ADDRESS = process.env.NEXT_PUBLIC_ADMIN_ADDRESS;
 
 const SideBar = ({
   openComponent,
