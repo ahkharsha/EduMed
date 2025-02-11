@@ -1,4 +1,0 @@
-# EduMed
-EduMed
-
-Medical dApp
